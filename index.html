@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Stok Frenzy Store</title>
+<style>
+  /* Reset & font */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    background: #000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #eee;
+    min-height: 100vh;
+    padding: 20px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Teks utama putih dengan glow halus */
+  h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 50px;
+    color: #fff;
+    text-shadow:
+      0 0 8px rgba(255, 255, 255, 0.8),
+      0 0 15px rgba(138, 43, 226, 0.7); /* purple glow */
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    user-select: none;
+  }
+
+  .products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .product-card {
+    background: #111;
+    border: 2px solid #8e44ad;
+    border-radius: 14px;
+    box-shadow:
+      0 0 12px #9b59b6,
+      inset 0 0 12px #8e44ad;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.3s ease;
+  }
+  .product-card:hover {
+    transform: translateY(-8px);
+    box-shadow:
+      0 0 24px #bb33ff,
+      inset 0 0 18px #a24dff;
+  }
+
+  .product-image {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* persegi */
+    object-fit: cover;
+    border-bottom: 2px solid #8e44ad;
+    filter: drop-shadow(0 0 8px #9b59b6);
+  }
+
+  .product-content {
+    padding: 18px 22px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-name {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: #d8b3ff;
+    margin-bottom: 8px;
+    text-shadow: 0 0 8px #bb33ff;
+  }
+
+  .product-price {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 14px;
+  }
+
+  .product-benefits {
+    flex-grow: 1;
+    font-size: 1rem;
+    line-height: 1.45;
+    color: #ccc;
+    margin-bottom: 22px;
+    letter-spacing: 0.02em;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn {
+    flex: 1 1 30%;
+    padding: 12px 0;
+    font-weight: 700;
+    font-size: 1.05rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    background: linear-gradient(135deg, #9b59b6, #bb33ff);
+    box-shadow:
+      0 0 9px #bb33ff,
+      0 5px 8px rgba(187, 51, 255, 0.6);
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    transition: background 0.35s ease, box-shadow 0.35s ease;
+  }
+  .btn:hover {
+    background: linear-gradient(135deg, #bb33ff, #9b59b6);
+    box-shadow:
+      0 0 16px #dd66ff,
+      0 7px 14px rgba(221, 102, 255, 0.8);
+  }
+
+  .btn-telegram {
+    background: #0088cc;
+    box-shadow: 0 0 12px #0088cc;
+  }
+  .btn-telegram:hover {
+    background: #00aaff;
+    box-shadow: 0 0 18px #00ccff;
+  }
+
+  .btn-channel {
+    background: #6a0dad;
+    box-shadow: 0 0 12px #9b30ff;
+  }
+  .btn-channel:hover {
+    background: #7f3fff;
+    box-shadow: 0 0 18px #bb33ff;
+  }
+
+  @media (max-width: 440px) {
+    .product-image {
+      height: auto;
+      aspect-ratio: 1 / 1;
+    }
+    .btn {
+      flex: 1 1 100%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<h1>Stok Frenzy Store</h1>
+
+<div class="products">
+  <div class="product-card">
+    <img class="product-image" src="https://files.catbox.moe/lsfw3z.jpg" alt="Panel Pteroadctyl" />
+    <div class="product-content">
+      <div class="product-name">STOK 1</div>
+      <div class="product-price">Rp250.000<br /><br />
+      Keunggulan</div>
+      <div class="product-benefits">
+• Log Google<br />
+• Bind Sepaket<br />
+• Full Spek Hubungi WhatsApp/Telegram
+</div>
+      <div class="buttons">
+        <a class="btn" href="https://wa.me/6285126709084?text=Halo%20Admin%20Ganteng,%20Saya%20Ingin%20Buy%20Stok1" target="_blank" rel="noopener noreferrer">Hubungi Via WhatsApp</a>
+        <a class="btn btn-telegram" href="https://t.me/frenzy_str" target="_blank" rel="noopener noreferrer">Hubungi Via Telegram</a>
+        <a class="btn btn-channel" href="https://chat.whatsapp.com/DLoeqRY8IGBA1Ey0QKsJod?mode=ac_t" target="_blank" rel="noopener noreferrer">Join Link Grup</a>
+      </div>
+    </div>
+  </div>
+  <div class="product-card">
+    <img class="product-image" src="https://files.catbox.moe/v1it7m.jpg" alt="Panel Pteroadctyl" />
+    <div class="product-content">
+      <div class="product-name">STOK 2</div>
+      <div class="product-price">Rp120.000<br /><br />
+      Keunggulan</div>
+      <div class="product-benefits">
+• Log Google<br />
+• Spek Gg<br />
+• Bind Kosong<br />
+• All Aman<br />
+• Full Spek Hubungi WhatsApp/Telegram
+</div>
+      <div class="buttons">
+        <a class="btn" href="https://wa.me/6285126709084?text=Halo%20Admin%20Ganteng,%20Saya%20Ingin%20Buy%20Stok2" target="_blank" rel="noopener noreferrer">Hubungi Via WhatsApp</a>
+        <a class="btn btn-telegram" href="https://t.me/frenzy_str" target="_blank" rel="noopener noreferrer">Hubungi Via Telegram</a>
+        <a class="btn btn-channel" href="https://chat.whatsapp.com/DLoeqRY8IGBA1Ey0QKsJod?mode=ac_t" target="_blank" rel="noopener noreferrer">Join Link Grup</a>
+      </div>
+    </div>
+  <div class="product-card">
+    <img class="product-image" src="https://files.catbox.moe/indne0.jpg" alt="Panel Pteroadctyl" />
+    <div class="product-content">
+      <div class="product-name">STOK 3</div>
+      <div class="product-price">Rp90.000<br /><br />
+      Keunggulan</div>
+      <div class="product-benefits">
+• Log Google<br />
+• Spek Gg<br />
+• Bind Kosong<br />
+• All Aman<br />
+• Full Spek Hubungi WhatsApp/Telegram
+</div>
+      <div class="buttons">
+        <a class="btn" href="https://wa.me/6285126709084?text=Halo%20Admin%20Ganteng,%20Saya%20Ingin%20Buy%20Stok3" target="_blank" rel="noopener noreferrer">Hubungi Via WhatsApp</a>
+        <a class="btn btn-telegram" href="https://t.me/frenzy_str" target="_blank" rel="noopener noreferrer">Hubungi Via Telegram</a>
+        <a class="btn btn-channel" href="https://chat.whatsapp.com/DLoeqRY8IGBA1Ey0QKsJod?mode=ac_t" target="_blank" rel="noopener noreferrer">Join Link Grup</a>
+      </div>
+    </div>
+  </div>
+  <div class="product-card">
+    <img class="product-image" src="https://files.catbox.moe/fv6n0e.jpg" alt="Panel Pteroadctyl" />
+    <div class="product-content">
+      <div class="product-name">STOK 4</div>
+      <div class="product-price">Rp30.000<br /><br />
+      Keunggulan</div>
+      <div class="product-benefits">
+• Log Google<br />
+• Spek Old<br />
+• Bind Kosong<br />
+• All Aman<br />
+• Full Spek Hubungi WhatsApp/Telegram
+</div>
+      <div class="buttons">
+        <a class="btn" href="https://wa.me/6285126709084?text=Halo%20Admin%20Ganteng,%20Saya%20Ingin%20Buy%20Stok4" target="_blank" rel="noopener noreferrer">Hubungi Via WhatsApp</a>
+        <a class="btn btn-telegram" href="https://t.me/frenzy_str" target="_blank" rel="noopener noreferrer">Hubungi Via Telegram</a>
+        <a class="btn btn-channel" href="https://chat.whatsapp.com/DLoeqRY8IGBA1Ey0QKsJod?mode=ac_t" target="_blank" rel="noopener noreferrer">Join Link Grup</a>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
